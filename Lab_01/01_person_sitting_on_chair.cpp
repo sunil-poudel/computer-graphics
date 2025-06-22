@@ -21,6 +21,9 @@ int main(){
 	//eyes
 	circle(65, 65, 5);
 	circle(85, 65, 5);
+	circle(65, 65, 1);
+	circle(85, 65, 1);
+
 	
 	//nose
 	circle(75, 80, 1);
