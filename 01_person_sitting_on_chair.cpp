@@ -18,6 +18,11 @@ int main(){
 	line(75, 105, 45, 150);
 	line(75, 105, 105, 150);
 	
+	//eyes
+	circle(65, 65, 5);
+	circle(85, 65, 5);
+	
+	
 	getch();
     closegraph();
 }
