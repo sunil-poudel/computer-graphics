@@ -22,6 +22,9 @@ int main(){
 	circle(65, 65, 5);
 	circle(85, 65, 5);
 	
+	//nose
+	circle(75, 80, 1);
+	
 	
 	getch();
     closegraph();
