@@ -25,6 +25,8 @@ int main(){
 	//nose
 	circle(75, 80, 1);
 	
+	//mouth
+	line(65, 90, 85, 90);
 	
 	getch();
     closegraph();
