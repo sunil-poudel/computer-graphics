@@ -39,6 +39,10 @@ int main() {
     cin >> x2 >> y2;
 
     drawLineDDA(x1, y1, x2, y2);
+    
+    int maxWidth = getmaxx();
+    int maxHeight = getmaxy();
+    
 
     getch();
     closegraph();
