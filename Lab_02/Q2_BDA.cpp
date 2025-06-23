@@ -95,17 +95,17 @@ int main(){
 	initgraph(&gd, &gm, NULL);
 	int x1, y1, x2, y2;
 	
-//	cout<<"enter the points: for (x1, y1) to (x2, y2)"<<endl;
-//	cout<<"x1 -> ";
-//	cin>>x1;
-//	cout<<"y1 -> ";
-//	cin>>y1;
-//	cout<<"x2 -> ";
-//	cin>>x2;
-//	cout<<"y2 -> ";
-//	cin>>y2;
-//	
-//	bda(x1, y1, x2, y2);
+	cout<<"enter the points: for (x1, y1) to (x2, y2)"<<endl;
+	cout<<"x1 -> ";
+	cin>>x1;
+	cout<<"y1 -> ";
+	cin>>y1;
+	cout<<"x2 -> ";
+	cin>>x2;
+	cout<<"y2 -> ";
+	cin>>y2;
+	
+	bda(x1, y1, x2, y2);
 
 //	bda(100, 200, 500, 400);  // dx = 400, dy = 200 ? m = 0.5
 //	bda(100, 400, 500, 200);  // dx = 400, dy = -200 ? m = -0.5
