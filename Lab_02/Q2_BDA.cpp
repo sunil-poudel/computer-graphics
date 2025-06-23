@@ -36,8 +36,19 @@ void bda(int x1, int y1, int x2, int  y2){
 int main(){
 	int gd = DETECT, gm;
 	initgraph(&gd, &gm, NULL);
+	int x1, y1, x2, y2;
 	
-	bda(0,0,100,100);
+	cout<<"enter the points: for (x1, y1) to (x2, y2)"<<endl;
+	cout<<"x1 -> ";
+	cin>>x1;
+	cout<<"y1 -> ";
+	cin>>y1;
+	cout<<"x2 -> ";
+	cin>>x2;
+	cout<<"y2 -> ";
+	cin>>y2;
+	
+	bda(x1, y1, x2, y2);
 	getch();
 	closegraph();
 	
