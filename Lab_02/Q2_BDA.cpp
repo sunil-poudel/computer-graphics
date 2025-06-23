@@ -13,8 +13,11 @@ void bda(int x1, int y1, int x2, int  y2){
 	line(0, centerHeight, maxWidth, centerHeight);
 	line(centerWidth, 0, centerWidth, maxHeight);
 	
-	int dx = x2 - x1;
-	int dy = y2 - y1;
+	int dx = x2 - x1, dy = y2 - y1;
+	
+	int decisionParameter = 2*dy - dx;
+	
+	int x = x1, y = y1;
 }
 int main(){
 	int gd = DETECT, gm;
