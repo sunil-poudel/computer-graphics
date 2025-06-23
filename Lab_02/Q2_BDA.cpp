@@ -18,6 +18,19 @@ void bda(int x1, int y1, int x2, int  y2){
 	int decisionParameter = 2*dy - dx;
 	
 	int x = x1, y = y1;
+	
+	for(int i = x1; i<= x2; i++){
+		putpixel(x, y, WHITE);
+		
+		if(decisionParameter<0){
+			x++;
+			decisionParameter += 2*dy;
+		} else{
+			x++;
+			y++;
+			decisionParameter += (2*dy)-(2*dx);
+		}
+	}
 }
 int main(){
 	int gd = DETECT, gm;
