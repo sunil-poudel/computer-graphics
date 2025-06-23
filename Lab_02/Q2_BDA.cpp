@@ -30,7 +30,7 @@ void bda(int x1, int y1, int x2, int  y2){
 	
 	int decisionParameter;
 	
-	float m = dy/dx;
+	float m = (float)dy/dx;
 	
 	for(int i = x1; i<= x2; i++){
 		putpixel(x, y, WHITE);
