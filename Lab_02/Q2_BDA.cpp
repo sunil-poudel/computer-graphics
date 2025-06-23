@@ -63,4 +63,18 @@ void bda(int x1, int y1, int x2, int y2) {
             delay(5);
         }
     }
+}int main() {
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, NULL);
+
+    int x1, y1, x2, y2;
+    cout << "Enter x1 y1 x2 y2 (relative to center): ";
+    cin >> x1 >> y1 >> x2 >> y2;
+
+    bda(x1, y1, x2, y2);
+
+    getch();
+    closegraph();
+    return 0;
 }
+
