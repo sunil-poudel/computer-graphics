@@ -8,25 +8,24 @@ void drawLineDDA(int x1, int y1, int x2, int y2, int maxHeight, int maxWidth) {
     float x_inc, y_inc, x, y, steps;
     int dx = x2 - x1;
     int dy = y2 - y1;
-	
-    // Determine number of steps based on max delta
-    steps = (abs(dx) > abs(dy)) ? abs(dx) : abs(dy);
 
-    // Calculate incremental values
+    steps = (abs(dx) > abs(dy)) ? abs(dx) : abs(dy);
     x_inc = dx / steps;
     y_inc = dy / steps;
 
-    // Initialize starting position
-    x = x1+maxWidth/2;
-    y = y1+maxHeight/2;
+    // Adjust for screen center and invert Y-axis
+    x = x1 + maxWidth / 2;
+    y = maxHeight / 2 - y1;  // subtract instead of add
 
     for (int i = 0; i <= steps; i++) {
-        putpixel(round(x), round(y), WHITE);
+        if (x >= 0 && x < maxWidth && y >= 0 && y < maxHeight)
+            putpixel(round(x), round(y), WHITE);
         x += x_inc;
-        y += y_inc;
-        delay(10); // Optional delay to visualize
+        y -= y_inc;  // invert y-axis by subtracting
+        delay(10);
     }
 }
+
 
 int main() {
     int gd = DETECT, gm;
