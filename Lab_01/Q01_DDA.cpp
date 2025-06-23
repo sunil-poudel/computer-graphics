@@ -17,7 +17,7 @@ void drawLineDDA(int x1, int y1, int x2, int y2, int maxHeight, int maxWidth) {
     y_inc = dy / steps;
 
     // Initialize starting position
-    x = x1+maxHeight/2;
+    x = x1+maxWidth/2;
     y = y1+maxWidth/2;
 
     for (int i = 0; i <= steps; i++) {
