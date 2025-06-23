@@ -18,7 +18,7 @@ void drawLineDDA(int x1, int y1, int x2, int y2, int maxHeight, int maxWidth) {
 
     // Initialize starting position
     x = x1+maxWidth/2;
-    y = y1+maxWidth/2;
+    y = y1+maxHeight/2;
 
     for (int i = 0; i <= steps; i++) {
         putpixel(round(x), round(y), WHITE);
