@@ -17,7 +17,7 @@ void bda(int x1, int y1, int x2, int  y2){
 	
 	int decisionParameter = 2*dy - dx;
 	
-	int x = x1, y = y1;
+	int x = x1+centerWidth, y = y1+centerHeight;
 	
 	for(int i = x1; i<= x2; i++){
 		putpixel(x, y, WHITE);
