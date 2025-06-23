@@ -30,6 +30,7 @@ void bda(int x1, int y1, int x2, int  y2){
 			y++;
 			decisionParameter += (2*dy)-(2*dx);
 		}
+		delay(10);
 	}
 }
 int main(){
