@@ -11,6 +11,7 @@ void bda(int x1, int y1, int x2, int  y2){
 	int centerWidth = maxWidth/2;
 	
 	line(0, centerHeight, maxWidth, centerHeight);
+	line(centerWidth, 0, centerWidth, maxHeight);
 }
 int main(){
 	int gd = DETECT, gm;
