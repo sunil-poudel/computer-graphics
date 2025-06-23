@@ -60,7 +60,18 @@ void bda(int x1, int y1, int x2, int  y2){
 				y++;
 				decisionParameter += (2*dx)-(2*dy);
 			}
+		}
+		else if(m<-1){
+			decisionParameter = 2*dx + dy;
 			
+			if(decisionParameter>0){
+				y--;
+				decisionParameter += 2*dx;
+			} else{
+				x++;
+				y--;
+				decisionParameter += (2*dx)+(2*dy);
+			}
 		}
 		
 		
