@@ -10,11 +10,9 @@ void bda(int x1, int y1, int x2, int y2) {
     int centerX = maxWidth / 2;
     int centerY = maxHeight / 2;
 
-    // Draw axes
     line(0, centerY, maxWidth, centerY);
     line(centerX, 0, centerX, maxHeight);
 
-    // Transform logical coordinates (centered) to screen coordinates
     int dx = abs(x2 - x1);
     int dy = abs(y2 - y1);
 
@@ -25,14 +23,13 @@ void bda(int x1, int y1, int x2, int y2) {
     int xinc = (x2 > x1) ? 1 : -1;
     int yinc = (y2 > y1) ? 1 : -1;
 
-    // Decision parameter
     int p;
 
-    // Case 1 & 2: gentle slope (|m| = 1)
+    // Case 1 & 2: (|m| = 1)
     if (dx >= dy) {
         p = 2 * dy - dx;
         for (int i = 0; i <= dx; i++) {
-            putpixel(centerX + x, centerY - y, WHITE); // plot relative to center
+            putpixel(centerX + x, centerY - y, WHITE);
 
             if (p < 0) {
                 x += xinc;
@@ -46,7 +43,7 @@ void bda(int x1, int y1, int x2, int y2) {
         }
     }
 
-    // Case 3 & 4: steep slope (|m| > 1)
+    // Case 3 & 4: (|m| > 1)
     else {
         p = 2 * dx - dy;
         for (int i = 0; i <= dy; i++) {
