@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void drawLineDDA(int x1, int y1, int x2, int y2) {
+void drawLineDDA(int x1, int y1, int x2, int y2, int maxHeight, int maxWidth) {
     float x_inc, y_inc, x, y, steps;
     int dx = x2 - x1;
     int dy = y2 - y1;
@@ -44,7 +44,7 @@ int main() {
     cout << "Enter the coordinates of the second point (x2 y2): ";
     cin >> x2 >> y2;
 
-    drawLineDDA(x1, y1, x2, y2);
+    drawLineDDA(x1, y1, x2, y2, maxHeight, maxWidth);
     
 	
     getch();
