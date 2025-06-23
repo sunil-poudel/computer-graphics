@@ -8,7 +8,7 @@ void drawLineDDA(int x1, int y1, int x2, int y2) {
     float x_inc, y_inc, x, y, steps;
     int dx = x2 - x1;
     int dy = y2 - y1;
-
+	
     // Determine number of steps based on max delta
     steps = (abs(dx) > abs(dy)) ? abs(dx) : abs(dy);
 
@@ -32,6 +32,12 @@ int main() {
     int gd = DETECT, gm;
     initgraph(&gd, &gm, NULL);
 
+    
+    int maxWidth = getmaxx();
+    int maxHeight = getmaxy();
+	line(maxWidth/2, 0, maxWidth/2, maxHeight);
+	line(0, maxHeight/2, maxWidth, maxHeight/2);
+
     int x1, y1, x2, y2;
     cout << "Enter the coordinates of the first point (x1 y1): ";
     cin >> x1 >> y1;
@@ -40,10 +46,7 @@ int main() {
 
     drawLineDDA(x1, y1, x2, y2);
     
-    int maxWidth = getmaxx();
-    int maxHeight = getmaxy();
-    
-
+	
     getch();
     closegraph();
     return 0;
