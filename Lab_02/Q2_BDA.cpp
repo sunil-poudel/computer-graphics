@@ -15,8 +15,6 @@ void bda(int x1, int y1, int x2, int  y2){
 	
 	int dx = x2 - x1, dy = y2 - y1;
 	
-	int decisionParameter = 2*dy - dx;
-	
 	int x = x1+centerWidth, y = y1+centerHeight;
 	
 	float m = dy/dx;
@@ -24,14 +22,20 @@ void bda(int x1, int y1, int x2, int  y2){
 	for(int i = x1; i<= x2; i++){
 		putpixel(x, y, WHITE);
 		
-		if(decisionParameter<0){
-			x++;
-			decisionParameter += 2*dy;
-		} else{
-			x++;
-			y++;
-			decisionParameter += (2*dy)-(2*dx);
-		}
+		if(m>=0 && m<=1){
+			int decisionParameter = 2*dy - dx;
+			
+			if(decisionParameter<0){
+				x++;
+				decisionParameter += 2*dy;
+			} else{
+				x++;
+				y++;
+				decisionParameter += (2*dy)-(2*dx);
+			}	
+		} 
+		
+		
 		delay(10);  
 		
 	}
