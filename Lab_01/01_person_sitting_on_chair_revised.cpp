@@ -20,7 +20,7 @@ void drawChairWithMan() {
     line(180, 200, 280, 200);
 
 	 // Head
-    circle(230, 190, 15);
+    circle(230, 220, 15);
 
     // main body
     line(230, 205, 230, 260);
