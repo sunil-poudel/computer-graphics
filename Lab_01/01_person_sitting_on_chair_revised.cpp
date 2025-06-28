@@ -20,22 +20,22 @@ void drawChairWithMan() {
     line(180, 200, 280, 200);
 
 	 // Head
-    circle(230, 220, 15);
+    circle(240, 220, 15);
 
     // main body
-    line(230, 235, 230, 280);
+    line(240, 235, 240, 280);
 
 	// Arms (from shoulders down to sides)
-    line(230, 235, 200, 250);   // left arm
-    line(230, 235, 260, 250);   // right arm
+    line(240, 235, 210, 250);   // left arm
+    line(240, 235, 270, 250);   // right arm
 
     // Legs (down to floor from seat edge)
-    line(230, 280, 200, 300);   // left thigh
-    line(230, 280, 260, 300);   // right thigh
+    line(240, 280, 210, 300);   // left thigh
+    line(240, 280, 270, 300);   // right thigh
 
     // Feet (legs extended down)
-    line(200, 300, 200, 340);   // left shin
-    line(260, 300, 260, 340);   // right shin
+    line(210, 300, 210, 330);   // left shin
+    line(270, 300, 270, 330);   // right shin
     
    
 }
