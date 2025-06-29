@@ -25,11 +25,13 @@ void bda(int x1, int y1, int x2, int y2) {
 
     int p;
 
-    // Case 1 & 2: (|m| = 1)
+    // for (|m| = 1)
     if (dx >= dy) {
         p = 2 * dy - dx;
         for (int i = 0; i <= dx; i++) {
             putpixel(centerX + x, centerY - y, WHITE);
+            cout << "(" <<x << ", " << y << ")" << endl;
+
 
             if (p < 0) {
                 x += xinc;
@@ -43,11 +45,12 @@ void bda(int x1, int y1, int x2, int y2) {
         }
     }
 
-    // Case 3 & 4: (|m| > 1)
+    // for (|m| > 1)
     else {
         p = 2 * dx - dy;
         for (int i = 0; i <= dy; i++) {
             putpixel(centerX + x, centerY - y, WHITE);
+			cout << "(" <<x << ", " << y << ")" << endl;
 
             if (p < 0) {
                 y += yinc;
