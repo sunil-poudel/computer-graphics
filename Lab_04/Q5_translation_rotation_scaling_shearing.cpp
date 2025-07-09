@@ -6,6 +6,11 @@
 
 using namespace std;
 
+int randomColor(){
+		srand(time(0));
+		return rand() % 6 + 0;
+}
+
 void drawTriangle(float x1, float x2, float x3, float y1, float y2, float y3){
 	line(x1, y1, x2, y2);
 	line(x1, y1, x3, y3);
@@ -94,9 +99,8 @@ int main(){
 //		ys2=y2*sy+y1 * (1 - sy);
 //		ys3=y3*sy+y1 * (1 - sy);
 //		
-//		srand(time(0));
-//		int color = rand() % 6 + 0;
-//		setcolor(color);
+
+//		setcolor(randomColor());
 //		setlinestyle(SOLID_LINE, 0, 3);
 //		drawTriangle(xs1, xs2, xs3, ys1, ys2, ys3);
 //		
@@ -104,6 +108,7 @@ int main(){
 //	}
 
 	//for scaling
+	k=3;
 	cout<<"press any key then enter to start rotating: ";
 	char c;
 	cin>>c;
@@ -115,7 +120,9 @@ int main(){
 	drawTriangle(x1,x2,x3,y1,y2,y3);
 	
 	float thetaDegrees;
-	cout<<"-----------------------------"<<endl;
+	
+	while(k!=0){
+		cout<<"-----------------------------"<<endl;
 	cout<<"enter the angle to rotate in degrees: "<<endl;
 	cout<<"angle -- ";
 	cin>>thetaDegrees;
@@ -134,10 +141,13 @@ int main(){
 	yr2 = centerY + (x2-centerX) * sin(thetaRadian) + (y2-centerY) * cos(thetaRadian);
 	yr3 = centerY + (x3-centerX) * sin(thetaRadian) + (y3-centerY) * cos(thetaRadian);
 	
+	setcolor(randomColor());
 	drawTriangle(xr1, xr2, xr3, yr1, yr2, yr3);
 	
 	
-	k=3;
+	k--;
+	}
+	
 		
 	getch();
 	closegraph();
