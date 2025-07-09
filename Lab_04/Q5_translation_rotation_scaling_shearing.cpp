@@ -42,6 +42,11 @@ int main(){
 	float x1,x2,x3,y1,y2,y3;
 	float tx, ty;
 	
+	float maxHeight = getmaxy();
+	float maxWidth = getmaxx();
+	float centerX = maxWidth/2;
+	float centerY = maxHeight/2;
+
 	setlinestyle(SOLID_LINE, 0, 3);
 	
 	cout<<"input the coordinates of a triangle: "<<endl;
@@ -127,10 +132,7 @@ int main(){
 //	cout<<"angle -- ";
 //	cin>>thetaDegrees;
 //	
-//	float maxHeight = getmaxy();
-//	float maxWidth = getmaxx();
-//	float centerX = maxWidth/2;
-//	float centerY = maxHeight/2;
+
 //	
 //	float thetaRadian = thetaDegrees * (M_PI / 180.0);
 //	float xr1, xr2, xr3, yr1, yr2, yr3;
@@ -160,6 +162,20 @@ int main(){
 	drawAxes(&x1,&x2,&x3,&y1,&y2,&y3);
 	drawTriangle(x1,x2,x3,y1,y2,y3);
 	
+	float shx, shy;
+	cout<<"enter value of shx and shy: "<<endl;
+	cout<<"shx shy -- ";
+	cin>>shx>>shy;
+	
+	float xsh1, xsh2, xsh3, ysh1, ysh2, ysh3;
+	xsh1 = x1 + shx*(y1);
+	ysh1 = y1 + shy*(x1);
+	xsh2 = x2 + shx*(y2);
+	ysh2 = y2 + shy*(x2);
+	xsh3 = x3 + shx*(y3);
+	ysh3 = y3 + shy*(x3);
+	
+	drawTriangle(xsh1, xsh2, xsh3, ysh1, ysh2, ysh3);
 		
 	getch();
 	closegraph();
