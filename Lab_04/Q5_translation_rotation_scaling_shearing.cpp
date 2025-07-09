@@ -71,6 +71,14 @@ int main(){
 	drawAxes(&x1,&x2,&x3,&y1,&y2,&y3);
 	drawTriangle(x1,x2,x3,y1,y2,y3);
 	
+	cout<<"-----------------------------"<<endl;
+	
+	cout<<"enter the scale:"<<endl;
+	cout<<"Sx Sy --- ";
+	int sx, sy;
+	cin>>sx>>sy;
+	
+	
 	getch();
 	closegraph();
 }
