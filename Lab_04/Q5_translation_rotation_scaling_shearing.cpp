@@ -58,7 +58,13 @@ int main(){
 		drawTriangle(x1+tx, x2+tx, x3+tx, y1-ty, y2-ty, y3-ty);
 		k--;	
 	}
-		
+	
+	cout<<"press any key to start scaling: ";
+	char c;
+	cin>>c;
+	setbkcolor(LIGHTBLUE);
+	cleardevice();
+	
 	getch();
 	closegraph();
 }
