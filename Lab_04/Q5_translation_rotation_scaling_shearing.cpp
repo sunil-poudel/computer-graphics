@@ -28,6 +28,7 @@ int main(){
 	initgraph(&gd, &gm, "");
 	
 	int x1,x2,x3,y1,y2,y3;
+	int tx, ty;
 	
 	cout<<"input the coordinates of a triangle: "<<endl;
 	cout<<"(x1,y1) ";
@@ -40,6 +41,10 @@ int main(){
 	
 	drawAxes(&x1,&x2,&x3,&y1,&y2,&y3);
 	drawTriangle(x1,x2,x3,y1,y2,y3);
+	
+	cout<<"enter translation vector: "<<endl;
+	cout<<"tx ty --- ";
+	cin>>tx>>ty;
 	
 	getch();
 	closegraph();
