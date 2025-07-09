@@ -13,6 +13,7 @@ void drawAxes(int* x1, int* x2, int* x3, int* y1, int* y2, int* y3){
 	int maxWidth = getmaxx();
 	int centerX = maxWidth/2;
 	int centerY = maxHeight/2;
+	
 	line(0, centerY, maxWidth, centerY);
 	line(centerX,0, centerX, maxHeight);
 	*x1+=centerX;
@@ -39,6 +40,9 @@ int main(){
 	cout<<"(x3,y3) ";
 	cin>>x3>>y3;
 	
+	setbkcolor(WHITE);
+	cleardevice();
+	setcolor(BLACK);
 	
 	drawAxes(&x1,&x2,&x3,&y1,&y2,&y3);
 	drawTriangle(x1,x2,x3,y1,y2,y3);
@@ -50,6 +54,7 @@ int main(){
 		cout<<"tx ty --- ";
 		cin>>tx>>ty;
 		
+		setcolor(RED);
 		drawTriangle(x1+tx, x2+tx, x3+tx, y1-ty, y2-ty, y3-ty);
 		k--;	
 	}
