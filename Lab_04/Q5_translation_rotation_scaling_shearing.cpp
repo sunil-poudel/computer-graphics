@@ -29,6 +29,7 @@ int main(){
 	int gd = DETECT , gm;
 	initgraph(&gd, &gm, "");
 	
+	int k = 3;
 	int x1,x2,x3,y1,y2,y3;
 	int tx, ty;
 	
@@ -50,7 +51,6 @@ int main(){
 //	drawTriangle(x1,x2,x3,y1,y2,y3);
 //	
 //	//for translation
-//	int k = 3;
 //	while(k!=0){
 //		cout<<"enter translation vector: "<<endl;
 //		cout<<"tx ty --- ";
@@ -73,20 +73,25 @@ int main(){
 	
 	cout<<"-----------------------------"<<endl;
 	
-	cout<<"enter the scale:"<<endl;
-	cout<<"Sx Sy --- ";
-	int sx, sy;
-	cin>>sx>>sy;
-	int xs1, xs2, xs3, ys1, ys2, ys3;
-	xs1=x1*sx+x1 * (1 - sx);
-	xs2=x2*sx+x1 * (1 - sx);
-	xs3=x3*sx+x1 * (1 - sx);
-	ys1=y1*sy+y1 * (1 - sy);
-	ys2=y2*sy+y1 * (1 - sy);
-	ys3=y3*sy+y1 * (1 - sy);
-	
-	drawTriangle(xs1, xs2, xs3, ys1, ys2, ys3);
-	
+	k=3;
+	while(k!=0){
+		cout<<"enter the scale:"<<endl;
+		cout<<"Sx Sy --- ";
+		int sx, sy;
+		cin>>sx>>sy;
+		int xs1, xs2, xs3, ys1, ys2, ys3;
+		xs1=x1*sx+x1 * (1 - sx);
+		xs2=x2*sx+x1 * (1 - sx);
+		xs3=x3*sx+x1 * (1 - sx);
+		ys1=y1*sy+y1 * (1 - sy);
+		ys2=y2*sy+y1 * (1 - sy);
+		ys3=y3*sy+y1 * (1 - sy);
+		
+		drawTriangle(xs1, xs2, xs3, ys1, ys2, ys3);
+		
+		k--;
+	}
+		
 	getch();
 	closegraph();
 }
