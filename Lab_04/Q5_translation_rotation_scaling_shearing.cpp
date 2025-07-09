@@ -169,12 +169,18 @@ int main(){
 		cin>>shx>>shy;
 		
 		float xsh1, xsh2, xsh3, ysh1, ysh2, ysh3;
-		xsh1 = x1 + shx*(y1);
-		ysh1 = y1 + shy*(x1);
-		xsh2 = x2 + shx*(y2);
-		ysh2 = y2 + shy*(x2);
-		xsh3 = x3 + shx*(y3);
-		ysh3 = y3 + shy*(x3);
+		xsh1 = x1 + shx*(y1-centerY);
+		ysh1 = y1 + shy*(x1-centerX);
+		xsh2 = x2 + shx*(y2-centerY);
+		ysh2 = y2 + shy*(x2-centerX);
+		xsh3 = x3 + shx*(y3-centerY);
+		ysh3 = y3 + shy*(x3-centerX);
+//		xsh1 = x1 + shx*(y1);
+//		ysh1 = y1 + shy*(x1);
+//		xsh2 = x2 + shx*(y2);
+//		ysh2 = y2 + shy*(x2);
+//		xsh3 = x3 + shx*(y3);
+//		ysh3 = y3 + shy*(x3);
 			
 		drawTriangle(xsh1, xsh2, xsh3, ysh1, ysh2, ysh3);
 		k--;
