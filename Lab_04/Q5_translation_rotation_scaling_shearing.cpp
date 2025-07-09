@@ -63,10 +63,49 @@ int main(){
 //		k--;	
 //	}
 //	
-	cout<<"press any key then enter to start scaling: ";
+	
+	//for scaling
+//	cout<<"press any key then enter to start scaling: ";
+//	char c;
+//	cin>>c;
+//	setbkcolor(LIGHTBLUE);
+//	cleardevice();
+//	setcolor(WHITE);
+//	
+//	drawAxes(&x1,&x2,&x3,&y1,&y2,&y3);
+//	drawTriangle(x1,x2,x3,y1,y2,y3);
+//	
+//	cout<<"-----------------------------"<<endl;
+//	
+//	k=3;
+//	
+//	while(k!=0){
+//		cout<<"enter the scale:"<<endl;
+//		cout<<"Sx Sy --- ";
+//		float sx, sy;
+//		cin>>sx>>sy;
+//		float xs1, xs2, xs3, ys1, ys2, ys3;
+//		xs1=x1*sx+x1 * (1 - sx);
+//		xs2=x2*sx+x1 * (1 - sx);
+//		xs3=x3*sx+x1 * (1 - sx);
+//		ys1=y1*sy+y1 * (1 - sy);
+//		ys2=y2*sy+y1 * (1 - sy);
+//		ys3=y3*sy+y1 * (1 - sy);
+//		
+//		srand(time(0));
+//		int color = rand() % 6 + 0;
+//		setcolor(color);
+//		setlinestyle(SOLID_LINE, 0, 3);
+//		drawTriangle(xs1, xs2, xs3, ys1, ys2, ys3);
+//		
+//		k--;
+//	}
+
+	//for scaling
+	cout<<"press any key then enter to start rotating: ";
 	char c;
 	cin>>c;
-	setbkcolor(LIGHTBLUE);
+	setbkcolor(BROWN);
 	cleardevice();
 	setcolor(WHITE);
 	
@@ -76,28 +115,6 @@ int main(){
 	cout<<"-----------------------------"<<endl;
 	
 	k=3;
-	
-	while(k!=0){
-		cout<<"enter the scale:"<<endl;
-		cout<<"Sx Sy --- ";
-		float sx, sy;
-		cin>>sx>>sy;
-		float xs1, xs2, xs3, ys1, ys2, ys3;
-		xs1=x1*sx+x1 * (1 - sx);
-		xs2=x2*sx+x1 * (1 - sx);
-		xs3=x3*sx+x1 * (1 - sx);
-		ys1=y1*sy+y1 * (1 - sy);
-		ys2=y2*sy+y1 * (1 - sy);
-		ys3=y3*sy+y1 * (1 - sy);
-		
-		srand(time(0));
-		int color = rand() % 6 + 0;
-		setcolor(color);
-		setlinestyle(SOLID_LINE, 0, 3);
-		drawTriangle(xs1, xs2, xs3, ys1, ys2, ys3);
-		
-		k--;
-	}
 		
 	getch();
 	closegraph();
