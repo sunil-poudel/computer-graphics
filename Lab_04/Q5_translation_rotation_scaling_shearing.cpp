@@ -60,100 +60,98 @@ int main(){
 	setbkcolor(WHITE);
 	cleardevice();
 	setcolor(BLACK);
-//	
-//	drawAxes(&x1,&x2,&x3,&y1,&y2,&y3);
-//	drawTriangle(x1,x2,x3,y1,y2,y3);
-//	
-//	//for translation
-//	while(k!=0){
-//		cout<<"enter translation vector: "<<endl;
-//		cout<<"tx ty --- ";
-//		cin>>tx>>ty;
-//		
-//		setcolor(RED);
-//		drawTriangle(x1+tx, x2+tx, x3+tx, y1-ty, y2-ty, y3-ty);
-//		k--;	
-//	}
-//	
+	
+	drawAxes(&x1,&x2,&x3,&y1,&y2,&y3);
+	drawTriangle(x1,x2,x3,y1,y2,y3);
+	
+	//for translation
+	while(k!=0){
+		cout<<"enter translation vector: "<<endl;
+		cout<<"tx ty --- ";
+		cin>>tx>>ty;
+		
+		setcolor(RED);
+		drawTriangle(x1+tx, x2+tx, x3+tx, y1-ty, y2-ty, y3-ty);
+		k--;	
+	}
+	
 	
 	//for scaling
-//	cout<<"press any key then enter to start scaling: ";
-//	char c;
-//	cin>>c;
-//	setbkcolor(LIGHTBLUE);
-//	cleardevice();
-//	setcolor(WHITE);
-//	
-//	drawAxes(&x1,&x2,&x3,&y1,&y2,&y3);
-//	drawTriangle(x1,x2,x3,y1,y2,y3);
-//	
-//	cout<<"-----------------------------"<<endl;
-//	
-//	k=3;
-//	
-//	while(k!=0){
-//		cout<<"enter the scale:"<<endl;
-//		cout<<"Sx Sy --- ";
-//		float sx, sy;
-//		cin>>sx>>sy;
-//		float xs1, xs2, xs3, ys1, ys2, ys3;
-//		xs1=x1*sx+x1 * (1 - sx);
-//		xs2=x2*sx+x1 * (1 - sx);
-//		xs3=x3*sx+x1 * (1 - sx);
-//		ys1=y1*sy+y1 * (1 - sy);
-//		ys2=y2*sy+y1 * (1 - sy);
-//		ys3=y3*sy+y1 * (1 - sy);
-//		
+	cout<<"press any key then enter to start scaling: ";
+	char c;
+	cin>>c;
+	setbkcolor(LIGHTBLUE);
+	cleardevice();
+	setcolor(WHITE);
+	
+	drawAxes(&x1,&x2,&x3,&y1,&y2,&y3);
+	drawTriangle(x1,x2,x3,y1,y2,y3);
+	
+	cout<<"-----------------------------"<<endl;
+	
+	k=3;
+	
+	while(k!=0){
+		cout<<"enter the scale:"<<endl;
+		cout<<"Sx Sy --- ";
+		float sx, sy;
+		cin>>sx>>sy;
+		float xs1, xs2, xs3, ys1, ys2, ys3;
+		xs1=x1*sx+x1 * (1 - sx);
+		xs2=x2*sx+x1 * (1 - sx);
+		xs3=x3*sx+x1 * (1 - sx);
+		ys1=y1*sy+y1 * (1 - sy);
+		ys2=y2*sy+y1 * (1 - sy);
+		ys3=y3*sy+y1 * (1 - sy);
+		
 
-//		setcolor(randomColor());
-//		setlinestyle(SOLID_LINE, 0, 3);
-//		drawTriangle(xs1, xs2, xs3, ys1, ys2, ys3);
-//		
-//		k--;
-//	}
+		setcolor(randomColor());
+		setlinestyle(SOLID_LINE, 0, 3);
+		drawTriangle(xs1, xs2, xs3, ys1, ys2, ys3);
+		
+		k--;
+	}
 
 //	//for rotating
-//	k=3;
-//	cout<<"press any key then enter to start rotating: ";
-//	char c;
-//	cin>>c;
-//	setbkcolor(BROWN);
-//	cleardevice();
-//	setcolor(WHITE);
-//	
-//	drawAxes(&x1,&x2,&x3,&y1,&y2,&y3);
-//	drawTriangle(x1,x2,x3,y1,y2,y3);
-//	
-//	float thetaDegrees;
-//	
-//	while(k!=0){
-//		cout<<"-----------------------------"<<endl;
-//	cout<<"enter the angle to rotate in degrees: "<<endl;
-//	cout<<"angle -- ";
-//	cin>>thetaDegrees;
-//	
+	k=3;
+	cout<<"press any key then enter to start rotating: ";
+	cin>>c;
+	setbkcolor(BROWN);
+	cleardevice();
+	setcolor(WHITE);
+	
+	drawAxes(&x1,&x2,&x3,&y1,&y2,&y3);
+	drawTriangle(x1,x2,x3,y1,y2,y3);
+	
+	float thetaDegrees;
+	
+	while(k!=0){
+		cout<<"-----------------------------"<<endl;
+	cout<<"enter the angle to rotate in degrees: "<<endl;
+	cout<<"angle -- ";
+	cin>>thetaDegrees;
+	
 
-//	
-//	float thetaRadian = thetaDegrees * (M_PI / 180.0);
-//	float xr1, xr2, xr3, yr1, yr2, yr3;
-//	xr1 = centerX + (x1-centerX) * cos(thetaRadian) - (y1-centerY) * sin(thetaRadian);
-//	xr2 = centerX + (x2-centerX) * cos(thetaRadian) - (y2-centerY) * sin(thetaRadian);
-//	xr3 = centerX + (x3-centerX) * cos(thetaRadian) - (y3-centerY) * sin(thetaRadian);
-//	yr1 = centerY + (x1-centerX) * sin(thetaRadian) + (y1-centerY) * cos(thetaRadian);
-//	yr2 = centerY + (x2-centerX) * sin(thetaRadian) + (y2-centerY) * cos(thetaRadian);
-//	yr3 = centerY + (x3-centerX) * sin(thetaRadian) + (y3-centerY) * cos(thetaRadian);
-//	
-//	setcolor(randomColor());
-//	drawTriangle(xr1, xr2, xr3, yr1, yr2, yr3);
-//	
-//	
-//	k--;
-//	}
+	
+	float thetaRadian = thetaDegrees * (M_PI / 180.0);
+	float xr1, xr2, xr3, yr1, yr2, yr3;
+	xr1 = centerX + (x1-centerX) * cos(thetaRadian) - (y1-centerY) * sin(thetaRadian);
+	xr2 = centerX + (x2-centerX) * cos(thetaRadian) - (y2-centerY) * sin(thetaRadian);
+	xr3 = centerX + (x3-centerX) * cos(thetaRadian) - (y3-centerY) * sin(thetaRadian);
+	yr1 = centerY + (x1-centerX) * sin(thetaRadian) + (y1-centerY) * cos(thetaRadian);
+	yr2 = centerY + (x2-centerX) * sin(thetaRadian) + (y2-centerY) * cos(thetaRadian);
+	yr3 = centerY + (x3-centerX) * sin(thetaRadian) + (y3-centerY) * cos(thetaRadian);
+	
+	setcolor(randomColor());
+	drawTriangle(xr1, xr2, xr3, yr1, yr2, yr3);
+	
+	
+	k--;
+	}
 
 	//for shearing
 	k=3;
 	cout<<"press any key then enter to start shearing: ";
-	char c;
 	cin>>c;
 	setbkcolor(BROWN);
 	cleardevice();
