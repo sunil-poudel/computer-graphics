@@ -32,6 +32,8 @@ int main(){
 	int x1,x2,x3,y1,y2,y3;
 	int tx, ty;
 	
+	setlinestyle(SOLID_LINE, 0, 3);
+	
 	cout<<"input the coordinates of a triangle: "<<endl;
 	cout<<"(x1,y1) ";
 	cin>>x1>>y1;
@@ -43,27 +45,31 @@ int main(){
 	setbkcolor(WHITE);
 	cleardevice();
 	setcolor(BLACK);
-	
-	drawAxes(&x1,&x2,&x3,&y1,&y2,&y3);
-	drawTriangle(x1,x2,x3,y1,y2,y3);
-	
-	//for translation
-	int k = 3;
-	while(k!=0){
-		cout<<"enter translation vector: "<<endl;
-		cout<<"tx ty --- ";
-		cin>>tx>>ty;
-		
-		setcolor(RED);
-		drawTriangle(x1+tx, x2+tx, x3+tx, y1-ty, y2-ty, y3-ty);
-		k--;	
-	}
-	
-	cout<<"press any key to start scaling: ";
+//	
+//	drawAxes(&x1,&x2,&x3,&y1,&y2,&y3);
+//	drawTriangle(x1,x2,x3,y1,y2,y3);
+//	
+//	//for translation
+//	int k = 3;
+//	while(k!=0){
+//		cout<<"enter translation vector: "<<endl;
+//		cout<<"tx ty --- ";
+//		cin>>tx>>ty;
+//		
+//		setcolor(RED);
+//		drawTriangle(x1+tx, x2+tx, x3+tx, y1-ty, y2-ty, y3-ty);
+//		k--;	
+//	}
+//	
+	cout<<"press any key then enter to start scaling: ";
 	char c;
 	cin>>c;
 	setbkcolor(LIGHTBLUE);
 	cleardevice();
+	setcolor(WHITE);
+	
+	drawAxes(&x1,&x2,&x3,&y1,&y2,&y3);
+	drawTriangle(x1,x2,x3,y1,y2,y3);
 	
 	getch();
 	closegraph();
