@@ -8,9 +8,19 @@ void drawTriangle(int x1, int x2, int x3, int y1, int y2, int y3){
 	line(x2, y2, x3, y3);
 }
 
+void drawAxes(){
+	int maxHeight = getmaxy();
+	int maxWidth = getmaxx();
+	int centerX = maxWidth/2;
+	int centerY = maxHeight/2;
+	line(0, centerY, maxWidth, centerY);
+	line(centerX,0, centerX, maxHeight);
+}
+
 int main(){
 	int gd = DETECT , gm;
 	initgraph(&gd, &gm, "");
+	drawAxes();
 	
 	int x1,x2,x3,y1,y2,y3;
 	
