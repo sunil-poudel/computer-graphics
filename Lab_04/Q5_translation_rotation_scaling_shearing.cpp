@@ -44,12 +44,16 @@ int main(){
 	drawTriangle(x1,x2,x3,y1,y2,y3);
 	
 	//for translation
-	cout<<"enter translation vector: "<<endl;
-	cout<<"tx ty --- ";
-	cin>>tx>>ty;
-	
-	drawTriangle(x1+tx, x2+tx, x3+tx, y1-ty, y2-ty, y3-ty);
-	
+	int k = 3;
+	while(k!=0){
+		cout<<"enter translation vector: "<<endl;
+		cout<<"tx ty --- ";
+		cin>>tx>>ty;
+		
+		drawTriangle(x1+tx, x2+tx, x3+tx, y1-ty, y2-ty, y3-ty);
+		k--;	
+	}
+		
 	getch();
 	closegraph();
 }
