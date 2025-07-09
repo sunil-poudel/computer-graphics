@@ -23,6 +23,7 @@ void drawAxes(int* x1, int* x2, int* x3, int* y1, int* y2, int* y3){
 	*y3=centerY-*y3;
 }
 
+
 int main(){
 	int gd = DETECT , gm;
 	initgraph(&gd, &gm, "");
@@ -42,9 +43,12 @@ int main(){
 	drawAxes(&x1,&x2,&x3,&y1,&y2,&y3);
 	drawTriangle(x1,x2,x3,y1,y2,y3);
 	
+	//for translation
 	cout<<"enter translation vector: "<<endl;
 	cout<<"tx ty --- ";
 	cin>>tx>>ty;
+	
+	drawTriangle(x1+tx, x2+tx, x3+tx, y1-ty, y2-ty, y3-ty);
 	
 	getch();
 	closegraph();
