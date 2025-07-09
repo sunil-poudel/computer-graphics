@@ -107,9 +107,50 @@ int main(){
 //		k--;
 //	}
 
-	//for scaling
+//	//for rotating
+//	k=3;
+//	cout<<"press any key then enter to start rotating: ";
+//	char c;
+//	cin>>c;
+//	setbkcolor(BROWN);
+//	cleardevice();
+//	setcolor(WHITE);
+//	
+//	drawAxes(&x1,&x2,&x3,&y1,&y2,&y3);
+//	drawTriangle(x1,x2,x3,y1,y2,y3);
+//	
+//	float thetaDegrees;
+//	
+//	while(k!=0){
+//		cout<<"-----------------------------"<<endl;
+//	cout<<"enter the angle to rotate in degrees: "<<endl;
+//	cout<<"angle -- ";
+//	cin>>thetaDegrees;
+//	
+//	float maxHeight = getmaxy();
+//	float maxWidth = getmaxx();
+//	float centerX = maxWidth/2;
+//	float centerY = maxHeight/2;
+//	
+//	float thetaRadian = thetaDegrees * (M_PI / 180.0);
+//	float xr1, xr2, xr3, yr1, yr2, yr3;
+//	xr1 = centerX + (x1-centerX) * cos(thetaRadian) - (y1-centerY) * sin(thetaRadian);
+//	xr2 = centerX + (x2-centerX) * cos(thetaRadian) - (y2-centerY) * sin(thetaRadian);
+//	xr3 = centerX + (x3-centerX) * cos(thetaRadian) - (y3-centerY) * sin(thetaRadian);
+//	yr1 = centerY + (x1-centerX) * sin(thetaRadian) + (y1-centerY) * cos(thetaRadian);
+//	yr2 = centerY + (x2-centerX) * sin(thetaRadian) + (y2-centerY) * cos(thetaRadian);
+//	yr3 = centerY + (x3-centerX) * sin(thetaRadian) + (y3-centerY) * cos(thetaRadian);
+//	
+//	setcolor(randomColor());
+//	drawTriangle(xr1, xr2, xr3, yr1, yr2, yr3);
+//	
+//	
+//	k--;
+//	}
+
+	//for shearing
 	k=3;
-	cout<<"press any key then enter to start rotating: ";
+	cout<<"press any key then enter to start shearing: ";
 	char c;
 	cin>>c;
 	setbkcolor(BROWN);
@@ -118,35 +159,6 @@ int main(){
 	
 	drawAxes(&x1,&x2,&x3,&y1,&y2,&y3);
 	drawTriangle(x1,x2,x3,y1,y2,y3);
-	
-	float thetaDegrees;
-	
-	while(k!=0){
-		cout<<"-----------------------------"<<endl;
-	cout<<"enter the angle to rotate in degrees: "<<endl;
-	cout<<"angle -- ";
-	cin>>thetaDegrees;
-	
-	float maxHeight = getmaxy();
-	float maxWidth = getmaxx();
-	float centerX = maxWidth/2;
-	float centerY = maxHeight/2;
-	
-	float thetaRadian = thetaDegrees * (M_PI / 180.0);
-	float xr1, xr2, xr3, yr1, yr2, yr3;
-	xr1 = centerX + (x1-centerX) * cos(thetaRadian) - (y1-centerY) * sin(thetaRadian);
-	xr2 = centerX + (x2-centerX) * cos(thetaRadian) - (y2-centerY) * sin(thetaRadian);
-	xr3 = centerX + (x3-centerX) * cos(thetaRadian) - (y3-centerY) * sin(thetaRadian);
-	yr1 = centerY + (x1-centerX) * sin(thetaRadian) + (y1-centerY) * cos(thetaRadian);
-	yr2 = centerY + (x2-centerX) * sin(thetaRadian) + (y2-centerY) * cos(thetaRadian);
-	yr3 = centerY + (x3-centerX) * sin(thetaRadian) + (y3-centerY) * cos(thetaRadian);
-	
-	setcolor(randomColor());
-	drawTriangle(xr1, xr2, xr3, yr1, yr2, yr3);
-	
-	
-	k--;
-	}
 	
 		
 	getch();
