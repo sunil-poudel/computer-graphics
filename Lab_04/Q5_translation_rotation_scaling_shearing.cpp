@@ -2,6 +2,8 @@
 #include <cstdlib>
 #include <ctime>
 #include <graphics.h>
+#include <cmath>
+
 using namespace std;
 
 void drawTriangle(float x1, float x2, float x3, float y1, float y2, float y3){
@@ -112,7 +114,13 @@ int main(){
 	drawAxes(&x1,&x2,&x3,&y1,&y2,&y3);
 	drawTriangle(x1,x2,x3,y1,y2,y3);
 	
+	float thetaDegrees;
 	cout<<"-----------------------------"<<endl;
+	cout<<"enter the angle to rotate in degrees: "<<endl;
+	cout<<"angle -- ";
+	cin>>thetaDegrees;
+	
+	float thetaRadian = thetaDegrees * (M_PI / 180.0);
 	
 	k=3;
 		
