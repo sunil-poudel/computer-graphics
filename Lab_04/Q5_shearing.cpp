@@ -65,22 +65,21 @@ int main(){
 	drawTriangle(x1,x2,x3,y1,y2,y3);
 	
 	float shx, shy;
-	while(k!=0){
-		cout<<"enter value of shx and shy: "<<endl;
-		cout<<"shx shy -- ";
-		cin>>shx>>shy;
-		
-		float xsh1, xsh2, xsh3, ysh1, ysh2, ysh3;
-		xsh1 = x1 + shx*(centerY-y1);
-		ysh1 = y1 + shy*(x1-centerX);
-		xsh2 = x2 + shx*(centerY-y2);
-		ysh2 = y2 + shy*(x2-centerX);
-		xsh3 = x3 + shx*(centerY-y3);
-		ysh3 = y3 + shy*(x3-centerX);
-
-		setcolor(randomColor());
-		drawTriangle(xsh1, xsh2, xsh3, ysh1, ysh2, ysh3);
-		k--;
+	while(k!=0) {
+	    cout << "enter value of shx and shy: " << endl;
+	    cout << "shx shy -- ";
+	    cin >> shx >> shy;
+	    
+	    float xsh1 = x1 + shx * (centerY - y1);
+	    float ysh1 = y1 + shy * (x1 - centerX);
+	    float xsh2 = x2 + shx * (centerY - y2);
+	    float ysh2 = y2 + shy * (x2 - centerX);
+	    float xsh3 = x3 + shx * (centerY - y3);
+	    float ysh3 = y3 + shy * (x3 - centerX);
+	    
+	    setcolor(randomColor());
+	    drawTriangle(xsh1, xsh2, xsh3, ysh1, ysh2, ysh3);
+	    k--;
 	}
 	
 	getch();
