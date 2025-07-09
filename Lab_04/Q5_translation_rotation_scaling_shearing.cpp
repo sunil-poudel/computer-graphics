@@ -2,17 +2,17 @@
 #include <graphics.h>
 using namespace std;
 
-void drawTriangle(int x1, int x2, int x3, int y1, int y2, int y3){
+void drawTriangle(float x1, float x2, float x3, float y1, float y2, float y3){
 	line(x1, y1, x2, y2);
 	line(x1, y1, x3, y3);
 	line(x2, y2, x3, y3);
 }
 
-void drawAxes(int* x1, int* x2, int* x3, int* y1, int* y2, int* y3){
-	int maxHeight = getmaxy();
-	int maxWidth = getmaxx();
-	int centerX = maxWidth/2;
-	int centerY = maxHeight/2;
+void drawAxes(float* x1, float* x2, float* x3, float* y1, float* y2, float* y3){
+	float maxHeight = getmaxy();
+	float maxWidth = getmaxx();
+	float centerX = maxWidth/2;
+	float centerY = maxHeight/2;
 	
 	line(0, centerY, maxWidth, centerY);
 	line(centerX,0, centerX, maxHeight);
@@ -30,8 +30,8 @@ int main(){
 	initgraph(&gd, &gm, "");
 	
 	int k = 3;
-	int x1,x2,x3,y1,y2,y3;
-	int tx, ty;
+	float x1,x2,x3,y1,y2,y3;
+	float tx, ty;
 	
 	setlinestyle(SOLID_LINE, 0, 3);
 	
@@ -77,9 +77,9 @@ int main(){
 	while(k!=0){
 		cout<<"enter the scale:"<<endl;
 		cout<<"Sx Sy --- ";
-		int sx, sy;
+		float sx, sy;
 		cin>>sx>>sy;
-		int xs1, xs2, xs3, ys1, ys2, ys3;
+		float xs1, xs2, xs3, ys1, ys2, ys3;
 		xs1=x1*sx+x1 * (1 - sx);
 		xs2=x2*sx+x1 * (1 - sx);
 		xs3=x3*sx+x1 * (1 - sx);
