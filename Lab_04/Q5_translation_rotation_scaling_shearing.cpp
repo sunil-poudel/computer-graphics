@@ -120,7 +120,22 @@ int main(){
 	cout<<"angle -- ";
 	cin>>thetaDegrees;
 	
+	float maxHeight = getmaxy();
+	float maxWidth = getmaxx();
+	float centerX = maxWidth/2;
+	float centerY = maxHeight/2;
+	
 	float thetaRadian = thetaDegrees * (M_PI / 180.0);
+	float xr1, xr2, xr3, yr1, yr2, yr3;
+	xr1 = centerX + (x1-centerX) * cos(thetaRadian) - (y1-centerY) * sin(thetaRadian);
+	xr2 = centerX + (x2-centerX) * cos(thetaRadian) - (y2-centerY) * sin(thetaRadian);
+	xr3 = centerX + (x3-centerX) * cos(thetaRadian) - (y3-centerY) * sin(thetaRadian);
+	yr1 = centerY + (x1-centerX) * sin(thetaRadian) + (y1-centerY) * cos(thetaRadian);
+	yr2 = centerY + (x2-centerX) * sin(thetaRadian) + (y2-centerY) * cos(thetaRadian);
+	yr3 = centerY + (x3-centerX) * sin(thetaRadian) + (y3-centerY) * cos(thetaRadian);
+	
+	drawTriangle(xr1, xr2, xr3, yr1, yr2, yr3);
+	
 	
 	k=3;
 		
