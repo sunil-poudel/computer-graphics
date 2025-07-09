@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 #include <graphics.h>
 using namespace std;
 
@@ -74,6 +76,7 @@ int main(){
 	cout<<"-----------------------------"<<endl;
 	
 	k=3;
+	
 	while(k!=0){
 		cout<<"enter the scale:"<<endl;
 		cout<<"Sx Sy --- ";
@@ -87,6 +90,10 @@ int main(){
 		ys2=y2*sy+y1 * (1 - sy);
 		ys3=y3*sy+y1 * (1 - sy);
 		
+		srand(time(0));
+		int color = rand() % 6 + 0;
+		setcolor(color);
+		setlinestyle(SOLID_LINE, 0, 3);
 		drawTriangle(xs1, xs2, xs3, ys1, ys2, ys3);
 		
 		k--;
