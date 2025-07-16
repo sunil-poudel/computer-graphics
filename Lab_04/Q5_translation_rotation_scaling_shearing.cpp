@@ -173,12 +173,6 @@ int main(){
 		ysh2 = y2 + shy*(x2-centerX);
 		xsh3 = x3 + shx*(centerY-y3);
 		ysh3 = y3 + shy*(x3-centerX);
-//		xsh1 = x1 + shx*(y1);
-//		ysh1 = y1 + shy*(x1);
-//		xsh2 = x2 + shx*(y2);
-//		ysh2 = y2 + shy*(x2);
-//		xsh3 = x3 + shx*(y3);
-//		ysh3 = y3 + shy*(x3);
 		setcolor(randomColor());
 		drawTriangle(xsh1, xsh2, xsh3, ysh1, ysh2, ysh3);
 		k--;
